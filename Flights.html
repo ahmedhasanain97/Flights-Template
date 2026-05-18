@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <!-- hidden header it appears only for small screens and tablets-->
+        <header>
+            <div class="profile-image-style"><img class="profile-image" src="./imgs/c740059521a90362be9410762e66b2e5.jpg" alt="profile-image"></div>
+            <div class="side-bar-btn"><i class="fa-solid fa-bars-staggered"></i></div>
+        </header>
+        <!-- menu panel-->
+        <nav class="side-bar">
+            <div class="profile">
+                <div class="profile-image-style"><img class="profile-image" src="./imgs/c740059521a90362be9410762e66b2e5.jpg" alt="profile-image"></div>
+                <div class="profile-name">Alex Johnson</div>
+                <div class="profile-email">alex.johnson@gmail.com</div>
+            </div>
+            <div class="menu">
+                <button class="menu-btn" id="dashboard-btn"><i class="fa-solid fa-house"></i> DASHBOARD</button>
+                <button class="menu-btn active" id="flights-btn"><i class="fa-solid fa-plane-departure"></i> FLIGHTS</button>
+                <button class="menu-btn" id="wallet-btn"><i class="fa-solid fa-wallet"></i> WALLLET</button>
+                <button class="menu-btn" id="reports-btn"><i class="fa-regular fa-newspaper"></i> REPORTS</button>
+                <button class="menu-btn" id="statistics-btn"><i class="fa-solid fa-chart-pie"></i> STATISTICS</button>
+                <button class="menu-btn" id="setting-btn"><i class="fa-solid fa-gear"></i> SETTINGS</button>
+            </div>
+            <div class="active-users"><span>Active Users</span>
+                <div class="users-imgs"><img src="imgs/user1.png" alt=""><img src="imgs/user2.jpg" alt=""><img src="imgs/user3.avif" alt=""><img src="imgs/user4.jpg" alt=""><img src="imgs/user3.avif" alt=""></div>
+                <div class="active-users-map"><img src="./imgs/ActiveUsers .png" alt="active-users"></div>
+            </div>
+        </nav>
+        <!-- search fillter area-->
+        <div class="search-filter">
+            <!-- first row containes the destination ,date and travellers numbers-->
+        <div class="first-row">
+            <div class="from-to">
+                <div class="input-group">
+                <i class="fa-solid fa-location-dot"></i>
+                <select name="from-location" id="from-location">
+                    <option value="NEY YORK (JFK)">NEY YORK (JFK)</option>
+                </select>
+                </div>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                <div class="input-group">
+                <i class="fa-solid fa-location-dot"></i>
+                <select name="to-location" id="to-location">
+                    <option value="Mumbai (BOM)">MUMBAI (BOM)</option>
+                </select>
+                </div>
+            </div>
+            <div class="date-number">
+            <div class="travel-date">
+                <input type="date" name="date-trip" id="date-trip">
+            </div>
+            <div class="travellers-number">
+                <i class="fa-solid fa-user-group"></i>
+                <select name="travellers-number" id="travellers-number">
+                    <option value="2">2 TRAVELLERS</option>
+                </select>
+            </div>
+            </div>
+            </div>
+            <!-- second row containts trip destitantion type if it's one way ,round or multi destination and trip class and search button-->
+            <div class="second-row">
+                <div class="trip-destination">
+                    <input type="radio" checked="true" name="trip-destination" id="oneWay" value="one way">
+                    <label for="oneWay">One Way</label>
+                    <input type="radio" name="trip-destination" id="roundTrip" value="round trip">
+                    <label for="roundTrip">Round-Trip</label>
+                    <input type="radio" name="trip-destination" id="multiCity" value="multi city">
+                    <label for="multiCity">Multi City</label>
+              </div>
+                <div class="type-search">
+                    <div class="trip-type">
+                    <i class="fa-solid fa-couch"></i>
+                    <select name="trip-type" id="trip-type">
+                        <option value="FIRST CLASS">FIRST CLASS</option>
+                    </select>
+                </div>
+            <button id="search.btn">Search</button>
+                </div>
+            </div>
+        </div>
+        <!-- i don't know the necessity of this section but it's in the template so ....-->
+        <div class="result-filter">
+            <div class="result-count">RESULT (25)</div>
+            <div class="filter-ticket">
+                <button>FILTER</button>
+                <select><option value="ticket of class">TICKET OF CLASS</option></select>
+            </div>
+        </div>
+        <!-- the search results looks like tickets so i made it hard codded it could be done with js but it consumes time and need actual data-->
+        <div class="search-results">
+            <div class="result-card">
+                <img class="company" src="imgs/emirates.png" alt="company">
+                <div class="from-depart">
+                <div class="from-location">JFK</div>
+                <div class="depart-time">13:00</div>
+                </div>
+                <div class="company-duration-stops">
+                    <div class="company">Emirates</div>
+                    <div class="duration">11H 20M</div>
+                    <div class="stops">NON-STOP</div>
+                </div>
+                <div class="to-arrive">
+                    <div class="to-location">BOM</div>
+                    <div class="arrive-time">14:20</div>
+                </div>
+                <div class="price-booknow">
+                    <div class="price">$1,572</div>
+                    <button class="book-now">BOOK NOW</button>
+                </div>
+            </div>
+            <div class="result-card card-style">
+                <img class="company" src="imgs/Qatar_Airways_Logo.png" alt="company">
+                <div class="from-depart">
+                <div class="from-location">JFK</div>
+                <div class="depart-time">13:00</div>
+                </div>
+                <div class="company-duration-stops">
+                    <div class="company">Emirates</div>
+                    <div class="duration">11H 20M</div>
+                    <div class="stops">NON-STOP</div>
+                </div>
+                <div class="to-arrive">
+                    <div class="to-location">BOM</div>
+                    <div class="arrive-time">14:20</div>
+                </div>
+                <div class="price-booknow">
+                    <div class="price">$1,572</div>
+                    <button class="book-now">BOOK NOW</button>
+                </div>
+            </div>
+            <div class="result-card card-style">
+                <img class="company" src="imgs/Lufthansa-Logo-PNG15.png" alt="company">
+                <div class="from-depart">
+                <div class="from-location">JFK</div>
+                <div class="depart-time">13:00</div>
+                </div>
+                <div class="company-duration-stops">
+                    <div class="company">Emirates</div>
+                    <div class="duration">11H 20M</div>
+                    <div class="stops">NON-STOP</div>
+                </div>
+                <div class="to-arrive">
+                    <div class="to-location">BOM</div>
+                    <div class="arrive-time">14:20</div>
+                </div>
+                <div class="price-booknow">
+                    <div class="price">$1,572</div>
+                    <button class="book-now">BOOK NOW</button>
+                </div>
+            </div>
+            <div class="result-card card-style">
+                <img class="company" src="imgs/emirates.png" alt="company">
+                <div class="from-depart">
+                <div class="from-location">JFK</div>
+                <div class="depart-time">13:00</div>
+                </div>
+                <div class="company-duration-stops">
+                    <div class="company">Emirates</div>
+                    <div class="duration">11H 20M</div>
+                    <div class="stops">NON-STOP</div>
+                </div>
+                <div class="to-arrive">
+                    <div class="to-location">BOM</div>
+                    <div class="arrive-time">14:20</div>
+                </div>
+                <div class="price-booknow">
+                    <div class="price">$1,572</div>
+                    <button class="book-now">BOOK NOW</button>
+                </div>
+            </div>
+        </div>
+        <!-- this is the right side panel it has some search fillter as well and range slider-->
+        <div class="right-search-panel">
+            <div class="from-stops-to">
+                <div class="from-location"><span>FROM</span><span class="location">JFK</span></div>
+                <div class="stops">NON-STOP</div>
+                <div class="to-location"><span>TO</span><span class="location">BOM</span></div>
+            </div>
+            <img src="imgs/side-panel.png" alt="fromtoworldimage">
+            <div class="trip-stops">
+                <input type="radio" checked="true" name="trip-stops" id="nonStop" value="non stop">
+                <label for="nonStop">NON STOP</label>
+                <input type="radio" name="trip-stops" id="oneStop" value="one stop">
+                <label for="oneStop">ONE STOP</label>
+                <input type="radio" name="trip-stops" id="moreStop" value="more stop">
+                <label for="moreStop">MORE STOP</label>
+            </div>
+            <div class="wrapper">
+                <span>PRICE</span>
+                 <div class="slider-container">
+                        <div class="slider-track"></div>
+                            <div class="first-slider"><input type="range" min="0" max="5000" value="500" id="slider-1" oninput="slideOne()"></div>
+                            <div class="second-slider"><input type="range" min="0" max="5000" value="3500" id="slider-2" oninput="slideTwo()"></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+   <script src="main.js"></script> 
+</body>
+</html>
